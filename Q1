@@ -1,0 +1,21 @@
+#include <stdio.h>
+#define LINHAS 3
+#define COLUNAS 3
+
+int main(){
+	int B[LINHAS][COLUNAS], A[LINHAS][COLUNAS] = {1,4,7,2,5,8,3,6,9};
+	
+	for(int I = 0; I < LINHAS; I++){ 
+		for(int J = 0; J < COLUNAS; J++){
+			B[I][J] = A[J][I];
+		}
+	}
+	
+	for(int P = 0; P < LINHAS; P++){ 
+		for(int M = 0; M < COLUNAS; M++){
+			printf("Matrizes[%d][%d] = %d \n",P, M, B[P][M]);
+		}
+	} 
+	
+	return 0;
+}
