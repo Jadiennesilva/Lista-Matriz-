@@ -1,1 +1,32 @@
-jf
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+
+
+int main(){
+   float A[2][2] = {{1, 2}, {3, 4}};
+   float B[2][2] = {{5, 6}, {7, 8}};
+   float C[2][2] = {{0, 0}, {0, 0}};
+    
+    setlocale(LC_ALL, "Portuguese_Brazil");
+    
+    printf("um Programa para multiplicar UMA matriz: \n");
+    
+    for(int I = 0; I < 2; I++){
+        for(int J = 0; J < 2; J++) {
+            for(int k = 0; k < 2; k++){
+                C[I][J] = C[I][J] + A[J][k] * B[k][J];           
+			}
+        }
+    }
+    
+    printf("MULTIPLIÇÃO DA MATRIZ:\n");
+    for(int I = 0; I < 2;I++) {
+        for(int J = 0; J < 2; J++){
+            printf("%f ", C[I][J]);
+        }
+        printf("\n");
+    }
+     system("pause");
+    return 0;
+}
