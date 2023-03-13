@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+
+
+   
+int main() {
+    int A[2][2];
+     setlocale(LC_ALL, "Portuguese_Brazil");
+
+    for (int l = 0; l < 2; ++l) {
+        for (int c = 0; c < 2; ++c) {
+            printf("Qual é o valor da posição [%d][%d]: ", l, c);
+            scanf("%d", &A[l][c]);
+        }
+    }
+    
+    
+    
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            if (i == j) {
+                A[i][j] = 1; 
+            } else {
+                A[i][j] = 0; 
+            }
+        }
+    }
+
+    printf("indentificação da matriz: \n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            printf("%d ", A[i][j]);
+        }
+        printf("\n");
+    }
+ system("pause");
+    return 0;
+}
